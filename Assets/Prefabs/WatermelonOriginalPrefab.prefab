@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WatermelonOriginalPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 63880a8e4dec7364a9518ae02e49f3d6, type: 3}
+      propertyPath: m_TagString
+      value: Prop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

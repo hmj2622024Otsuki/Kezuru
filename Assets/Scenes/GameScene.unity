@@ -2243,6 +2243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   HealthTxt: {fileID: 593242281}
+  HP: 300
 --- !u!4 &89835911
 Transform:
   m_ObjectHideFlags: 0
@@ -7060,7 +7061,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.12853599, y: 0, z: 0, w: 0.99170494}
-  m_LocalPosition: {x: 0, y: 1.67, z: -3.36}
+  m_LocalPosition: {x: 0, y: 1.54, z: -4.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8310,6 +8311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PropGenerator
   propPrefab: {fileID: 3368687900290811448, guid: 4b114f651076a7846a7e5df8ccd02c02, type: 3}
+  Camera: {fileID: 330585543}
 --- !u!4 &401886422
 Transform:
   m_ObjectHideFlags: 0
@@ -16209,6 +16211,45 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3637134996410565414, guid: 9c6178fe943216540b276b975dafae16, type: 3}
   m_PrefabInstance: {fileID: 789419489}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &790108708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1625865984834577603, guid: e047deb34b628f34ca046509215a1457, type: 3}
+  m_PrefabInstance: {fileID: 613896764477030607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &790108711
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790108708}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.68943423, y: 1.2128636, z: 0.63305724}
+  m_Center: {x: 0.007132262, y: 0.59, z: 0.03310734}
+--- !u!114 &790108714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790108708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301fb4a2296b0fb45b27039fcd3cfa2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DogManager
+  damageSE: {fileID: 8300000, guid: b1e099ad3678213459e842099645519a, type: 3}
 --- !u!1001 &795890186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41724,7 +41765,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1625865984834577603, guid: e047deb34b628f34ca046509215a1457, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 790108711}
+    - targetCorrespondingSourceObject: {fileID: 1625865984834577603, guid: e047deb34b628f34ca046509215a1457, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 790108714}
   m_SourcePrefab: {fileID: 100100000, guid: e047deb34b628f34ca046509215a1457, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

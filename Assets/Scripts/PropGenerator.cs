@@ -5,18 +5,13 @@ using UnityEngine.InputSystem;
 public class PropGenerator : MonoBehaviour
 {
 	[SerializeField] GameObject propPrefab;
-	//Rigidbody rigid3D;
+	[SerializeField] GameObject Camera;
+	Rigidbody rigid;
 
-	//void Shoot(Vector3 dir)
-	//{
-	//	rigid3D.AddForce(dir);
-	//	Shoot(new Vector3(0, 200, 2000)
-	//});
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+	// Start is called once before the first execution of Update after the MonoBehaviour is created
+	void Start()
     {
-        //rigid3D = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -25,8 +20,16 @@ public class PropGenerator : MonoBehaviour
 		if (Mouse.current.leftButton.wasPressedThisFrame)
 		{
 			GameObject prop = Instantiate(propPrefab);
-			Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.value);
-			//Shoot(ray.direction * 2000);
+			rigid = prop.GetComponent<Rigidbody>();
+
+			if (rigid != null)
+			{
+				// スイカをカメラの位置に持っていく
+				prop.transform.position = Camera.transform.position;
+				rigid.AddForce(Random.Range(-2, 2), -3, Random.Range(7, 15), ForceMode.Impulse);
+			}
+
+			Destroy(prop, 5.0f); // 五秒経ったらクローンを削除
 		}
 
 	}
